@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="pkg.facade.correct.SecurityCodeCheck" x="362" y="437">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="pkg.facade.correct.WelcomeToBank" x="77" y="329">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="pkg.facade.BankAccountFacade" x="314" y="173">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="pkg.facade.correct.AccountNumberCheck"
+            endpointName="accChecker" kind="Simple"/>
+        <Association
+            destinationClassName="pkg.facade.correct.WelcomeToBank"
+            endpointName="bankWelcome" kind="Simple"/>
+        <Association
+            destinationClassName="pkg.facade.correct.FundsCheck"
+            endpointName="fundChecker" kind="Simple"/>
+        <Association
+            destinationClassName="pkg.facade.correct.SecurityCodeCheck"
+            endpointName="codeChecker" kind="Simple"/>
+        <Communication destinationClassName="pkg.facade.correct.SecurityCodeCheck"/>
+        <Communication destinationClassName="pkg.facade.correct.AccountNumberCheck"/>
+        <Communication destinationClassName="pkg.facade.correct.FundsCheck"/>
+    </Class>
+    <Class name="test.client.TestClient" x="595" y="53">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="pkg.facade.BankAccountFacade"/>
+    </Class>
+    <Class name="pkg.facade.correct.AccountNumberCheck" x="175" y="431">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="pkg.facade.correct.FundsCheck" x="503" y="515">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+</ClassDiagram>
